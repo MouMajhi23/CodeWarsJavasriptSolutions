@@ -1,0 +1,23 @@
+function sortArray(array) {
+  // Return a sorted array.
+  console.log(array)
+  let temp = [];
+   for( let i = 0 ; i < array.length ; i++){
+     if(array[i] % 2 !== 0){
+       temp.push(array[i]);
+       array[i] = -1;
+       
+     }
+   }
+  temp.sort((a,b) => a - b)
+
+  console.log(temp)
+  let k = 0;
+  for(let j = 0 ; j < array.length ; j++){
+      if(array[j] === -1){
+        array[j] = temp[k];
+        k++;
+      }
+  }
+  return array;
+  }
