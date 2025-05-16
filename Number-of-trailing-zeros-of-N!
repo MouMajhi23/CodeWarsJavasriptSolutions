@@ -1,0 +1,9 @@
+function zeros (n) {
+  let sum = 0;
+  while(n >=1){
+    let b = Math.floor(n / 5);
+    sum += b;
+    n /= 5
+  }
+  return sum;
+}
